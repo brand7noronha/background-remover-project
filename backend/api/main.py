@@ -5,6 +5,10 @@ from rembg import remove
 from PIL import Image
 import io
 
+
+app = FastAPI()
+
+# Adding CORS Middleware to allow only specific connections to talk to this api
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -14,8 +18,6 @@ app.add_middleware(
     allow_methods=["POST"],
     allow_headers=["*"],
 )
-
-app = FastAPI()
 
 @app.get("/health")
 def health():

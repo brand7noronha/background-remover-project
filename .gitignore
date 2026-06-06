@@ -1,2 +1,5 @@
 env
 __pycache__/
+backend/Dockerfile
+backend/README.md
+backend/.gitignore
